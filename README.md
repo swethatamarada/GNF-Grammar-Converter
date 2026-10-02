@@ -1,82 +1,66 @@
 # Greibach Normal Form (GNF) Converter
 
-An interactive web application for converting Context-Free Grammars (CFGs) into **Greibach Normal Form (GNF)**.
+An interactive web application for converting Context-Free Grammars (CFGs) into Greibach Normal Form (GNF).
 
-The application provides a step-by-step visualization of the grammar transformation process and also includes a string membership tester to compare the original CFG with the converted GNF gramma
+#Live Demo
 
- **Project Overview**
+ [OPEN THE GNF CONVERTER APPLICATION](https://swethatamarada.github.io/GNF-Grammar-Converter/)
 
-Greibach Normal Form (GNF) is a standard form of Context-Free Grammars used in Formal Language and Automata Theory.
+Click the link above to directly open and use the application.
 
-In GNF, productions generally follow the form:
-A → aA₁A₂...Aₖ
+Features
 
-The application performs the conversion through six major stages.
+- Interactive CFG input
+- CFG to GNF conversion
+- Six-step transformation pipeline
+- Null removal
+- Unit production removal
+- CNF conversion
+- Left recursion removal
+- Back-substitution
+- Final GNF
+- String membership testing
 
-**GNF Conversion Pipeline**
+GNF Conversion Pipeline
 
-**Step 1 — Null (ε) Removal**
+Step 1 — Null (ε) Removal
 
 Removes nullable productions and updates the grammar accordingly.
 
-**Step 2 — Unit Removal**
+Step 2 — Unit Removal
 
-Removes unit productions such as: A → B
-and substitutes the productions of the referenced non-terminal.
+Removes unit productions such as: A → B and substitutes the productions of the referenced non-terminal.
 
-**Step 3 — CNF Conversion**
+Step 3 — CNF Conversion
 
 Transforms productions into an appropriate Chomsky Normal Form representation before continuing the GNF conversion.
 
-**Step 4 — Left Recursion & Ordering**
+Step 4 — Left Recursion & Ordering
 
 Handles direct and indirect left recursion and establishes the required variable ordering.
 
-**Step 5 — Back-Substitution**
+Step 5 — Back-Substitution
 
 Performs substitution using ordered variables to transform productions toward terminal-leading form.
 
-**Step 6 —  Z-Substitution & Final GNF**
+Step 6 — Z-Substitution & Final GNF
 
-Performs Z-variable substitution and enforces strict GNF formatting.
-The final grammar follows the structure:A → a A₁ A₂ ... Aₖ
-
-The application includes a String Membership Tester.
+Performs Z-variable substitution and enforces strict GNF formatting. The final grammar follows the structure:A → a A₁ A₂ ... Aₖ
 
 A user can enter a string and compare whether it is accepted by:
 
-The original CFG
-The converted GNF grammar
+The original CFG The converted GNF grammar
 
 The application also reports whether the acceptance results are equivalent.
 
 Example:Input: "abb"
 
-Original Grammar: ACCEPTED
-Final GNF Grammar: ACCEPTED
-Language Equivalence: VERIFIED
+Original Grammar: ACCEPTED Final GNF Grammar: ACCEPTED Language Equivalence: VERIFIED
 
+ Technologies Used
 
-
- Technology      Purpose                    
- --------------   -------------------------- 
- HTML5            Application structure      
- CSS3             User interface and styling 
- JavaScript       GNF conversion logic       
- JavaScript DOM   Interactive UI             
- Git              Version control            
- GitHub           Source code hosting        
- GitHub Pages     Application deployment     
-
-OPEN THE GNF CONVERTER APPLICATION
-(https://swethatamarada.github.io/GNF-Grammar-Converter/)
-
-
-
-
-
-
-
-
-
-
+- HTML5
+- CSS3
+- JavaScript
+- Git
+- GitHub Pages
